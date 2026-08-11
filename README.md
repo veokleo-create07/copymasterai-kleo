@@ -1,34 +1,40 @@
 # CopyMaster
 
-Email copywriting testing dashboard. Paste a subject + body and get instant,
-local feedback: Hemingway-style readability, spam/deliverability risk, and a
+Email copywriting testing dashboard (Vite + React SPA). Paste a subject + body
+and get instant local feedback: Hemingway-style readability, spam risk, and a
 mock AI-detection score.
 
 ## Stack
 
-- Next.js 16 (App Router) + TypeScript
+- Vite + React + TypeScript
 - Tailwind CSS v4
 - Framer Motion + lucide-react
-- Pure sync analysis in `src/lib/textAnalysis.ts` (no NLP libs, no network)
+- Pure sync analysis in `src/lib/textAnalysis.ts`
 
 ## Develop
 
 ```bash
 npm install
-cp .env.local.example .env.local   # fill in later when AI/DB land
+cp .env.local.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:5173](http://localhost:5173).
 
 ```bash
-npm test      # analysis unit tests
-npm run build
+npm test
+npm run build   # outputs to /dist
 ```
 
-## Structure
+## Vercel
 
-See `src/app`, `src/components`, and `src/lib/textAnalysis.ts`.
-`page.tsx` owns `subject` / `text` state; children are presentational.
+Root app. `vercel.json` sets:
+- `framework`: `vite`
+- `outputDirectory`: `dist`
+- SPA rewrite: all routes → `/index.html`
 
-Secrets stay server-side — see `.env.local.example`.
+Dashboard settings (if overrides exist):
+- Root Directory: blank / `.`
+- Framework: Vite
+- Output Directory: `dist` (or leave default)
+- Do not set Next.js as the framework

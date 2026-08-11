@@ -10,6 +10,7 @@
   --warn: #d97706;
   --info: #0284c7;
   --passive: #7c3aed;
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -22,13 +23,25 @@
   --color-warn: var(--warn);
   --color-info: var(--info);
   --color-passive: var(--passive);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {

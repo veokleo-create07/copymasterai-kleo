@@ -1,5 +1,3 @@
-"use client";
-
 import { useMemo, useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
@@ -21,7 +19,7 @@ Please click here to double your income with our risk free guarantee. This messa
 
 Visit test-link.invalid for details. Your invoice is ready and the form is completed once you confirm.`;
 
-export default function HomePage() {
+export default function App() {
   const [subject, setSubject] = useState(SAMPLE_SUBJECT);
   const [text, setText] = useState(SAMPLE_BODY);
 

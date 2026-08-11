@@ -1,5 +1,3 @@
-"use client";
-
 const LEGEND = [
   { label: "Hard sentence", className: "bg-amber-200/80" },
   { label: "Very hard", className: "bg-rose-200/80" },

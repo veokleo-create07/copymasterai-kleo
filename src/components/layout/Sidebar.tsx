@@ -1,5 +1,3 @@
-"use client";
-
 import { Feather, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
