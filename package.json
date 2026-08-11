@@ -1,0 +1,16 @@
+{
+  "name": "copymaster-ai-kleo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cd copy-master && npm install && npm run build",
+    "dev": "cd copy-master && npm run dev",
+    "start": "cd copy-master && npm run start",
+    "lint": "cd copy-master && npm run lint"
+  },
+  "dependencies": {
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  }
+}

@@ -2,9 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "buildCommand": "cd copy-master && npm install && npm run build",
-  "installCommand": "cd copy-master && npm install",
-  "outputDirectory": "copy-master/.next",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "installCommand": "npm install",
+  "outputDirectory": "copy-master/.next"
 }
